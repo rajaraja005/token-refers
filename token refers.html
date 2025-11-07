@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Token Refresh / Expiry Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Token Refresh & Expiry Demo</h1>
+
+    <div class="controls">
+      <button id="btn-issue">Issue Token (Login)</button>
+      <button id="btn-call">Call Protected API</button>
+      <button id="btn-revoke">Revoke Token (Logout)</button>
+    </div>
+
+    <section class="status">
+      <h2>Token Status</h2>
+      <pre id="token-info">No token yet.</pre>
+    </section>
+
+    <section class="logs">
+      <h2>Logs</h2>
+      <div id="log"></div>
+    </section>
+
+    <footer>
+      <small>
+        This demo stores tokens in <code>localStorage</code> for simplicity.
+        For production use httpOnly cookies or secure storage.
+      </small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
